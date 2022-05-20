@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_app/data_model/property_model.dart';
 import 'package:flutter_app/data_model/user_model.dart';
+import 'package:flutter_app/data_model/sqliteDB.dart' as myDB;
 
 import 'dart:async';
 import 'dart:convert';
@@ -58,8 +59,6 @@ class NetworkController {
 
       final List<Map<String, dynamic>> maps =
       await propertyDataBase.query('properties');
-
-      print(maps.toList());
 
       return List.generate(maps.length, (i) {
         return Property(

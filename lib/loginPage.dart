@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/network/networkController.dart';
 
-class UserPage extends StatefulWidget {
-  const UserPage({Key? key, required this.title}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -10,7 +10,7 @@ class UserPage extends StatefulWidget {
   _UserState createState() => _UserState();
 }
 
-class _UserState extends State<UserPage> {
+class _UserState extends State<LoginPage> {
   TextEditingController username = TextEditingController();
   TextEditingController password = TextEditingController();
 

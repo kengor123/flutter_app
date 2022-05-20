@@ -21,41 +21,51 @@ class Detail extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 ListTile(
-                  title: Text(
-                    property.property_title,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                ListTile(
                   title: Image.network('${property.image_URL}'),
                 ),
                 ListTile(
-                  title: Text("Estate: " + property.estate),
-                ),
-                ListTile(
-                  title: Text("Rent: \$ ${property.rent}"),
-                ),
-                ListTile(
-                  title: Text("Gross Area: ${property.gross_area}"),
-                ),
-                ListTile(
-                  title: Text("Bedrooms: ${property.bedrooms}"),
-                ),
-                TextButton(
-                  style: ButtonStyle(
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.blue),
+                  title: Text(
+                    property.property_title,
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                    textScaleFactor: 2,
                   ),
-                  onPressed: () {},
-                  child: Text('move in'),
                 ),
-                TextButton(
-                    style: ButtonStyle(
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.blue),
-                    ),
-                    onPressed: () {},
-                    child: const Text('address'))
+                ListTile(
+                  title: Text(
+                      "Estate: ${property.estate},  Rent: \$${property.rent}"),
+                ),
+                ListTile(
+                  title: Text(
+                      "Area: ${property.gross_area},  Bedrooms: ${property.bedrooms}"),
+                ),
+                ListTile(
+                  title: Text("Tenants : ${property.expected_tenants}"),
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      ElevatedButton(
+                        style: ButtonStyle(
+                          foregroundColor:
+                              MaterialStateProperty.all<Color>(Colors.blue),
+                        ),
+                        onPressed: () {},
+                        child: Text('move in',
+                            style: TextStyle(color: Colors.white)),
+                      ),
+                      ElevatedButton(
+                          style: ButtonStyle(
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.blue),
+                          ),
+                          onPressed: () {},
+                          child: const Text('address',
+                              style: TextStyle(color: Colors.white)))
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  ),
+                  alignment: Alignment.center,
+                )
               ],
             ),
           ),

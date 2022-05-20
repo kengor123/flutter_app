@@ -3,7 +3,7 @@ import 'package:path/path.dart';
 
 class DataBase{
 
-  Future<Database> createDb() async {
+   Future<Database> createDb() async {
     final database = openDatabase(
       join(await getDatabasesPath(), 'rental_app_database.db'),
       onCreate: (db, version) {

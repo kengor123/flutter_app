@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/estatePage.dart';
 import 'package:flutter_app/homePage.dart';
 import 'package:flutter_app/roomPage.dart';
-import 'package:flutter_app/userPage.dart';
+import 'package:flutter_app/loginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,10 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      // title: 'Flutter Demo',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-      // ),
       home: MyStatefulWidget(),
       debugShowCheckedModeBanner: false,
     );
@@ -42,7 +38,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     HomePage(title: 'Home'),
     EstatePage(title: 'Estate'),
     RoomPage(title: 'Room'),
-    UserPage(title: 'User'),
+    LoginPage(title: 'User'),
   ];
 
   void _onItemTapped(int index) {
